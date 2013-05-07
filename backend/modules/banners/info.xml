@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>banners</name>
+	<version>1.1.0</version>
+	<requirements>
+		<minimum_version>3.5.0</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[
+			Add banner campaigns to your website and track their statistics.
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[Lowie Benoot]]></name>
+			<url><![CDATA[http://www.lowiebenoot.be]]></url>
+		</author>
+	</authors>
+	<events>
+		<event application="backend" name="after_add"><![CDATA[Triggered when a banner is added.]]></event>
+		<event application="backend" name="after_delete"><![CDATA[Triggered when a banner is deleted.]]></event>
+		<event application="backend" name="after_edit"><![CDATA[Triggered when a banner is edited.]]></event>
+		<event application="backend" name="after_add_group"><![CDATA[Triggered when a group is added.]]></event>
+		<event application="backend" name="after_delete_group"><![CDATA[Triggered when a group is deleted.]]></event>
+		<event application="backend" name="after_edit_group"><![CDATA[Triggered when a group is edited.]]></event>
+		<event application="backend" name="after_saved_settings"><![CDATA[Triggered when the settings are saved.]]></event>
+	</events>
+</module>

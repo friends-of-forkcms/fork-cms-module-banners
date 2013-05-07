@@ -1,0 +1,22 @@
+.oneLiner .firstChild label {
+	width: 111px;
+}
+
+.imageWrapper {
+	text-align: center;
+	border-top: 1px solid #ddd !important;
+	border-top-left-radius: 4px;
+	-webkit-border-top-left-radius: 4px;
+	-moz-border-radius-topleft: 4px;
+	border-top-right-radius: 4px;
+	-webkit-border-top-right-radius: 4px;
+	-moz-border-radius-topright: 4px;
+}
+
+input.inputDate {
+	width: 80px;
+}
+
+input.time {
+	width: 40px;
+}
