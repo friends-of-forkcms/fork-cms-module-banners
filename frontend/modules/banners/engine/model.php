@@ -62,30 +62,36 @@ class FrontendBannersModel
 	 */
 	public static function getRandomBannerForGroup($id)
 	{
-		// get db
-		$db = FrontendModel::getContainer()->get('database');
+        // get db
+        $db = FrontendModel::getContainer()->get('database');
 
-		// get a random banner from the group
-		$banner = (array) $db->getRecords(
-			'SELECT b.id, b.file, b.url, s.width, s.height
-			 FROM banners_groups_members AS m
-			 INNER JOIN banners AS b ON b.id = m.banner_id
-			 INNER JOIN banners_groups AS g ON g.id = m.group_id
-			 INNER JOIN banners_standards AS s on s.id = g.standard_id
-			 WHERE m.group_id = ? AND
-			 	(b.date_till >= NOW() OR b.date_till IS NULL) AND
-			 	(b.date_from <= NOW() OR b.date_from IS NULL)',
-			array((int) $id)
-		);
+        // get a random banner from the group
+        $banner = (array)$db->getRecords(
+            'SELECT b.id, b.file, b.url, s.width, s.height
+             FROM banners_groups_members AS m
+             INNER JOIN banners AS b ON b.id = m.banner_id
+             INNER JOIN banners_groups AS g ON g.id = m.group_id
+             INNER JOIN banners_standards AS s on s.id = g.standard_id
+             WHERE m.group_id = ? AND
+                 (b.date_till >= NOW() OR b.date_till IS NULL) AND
+                 (b.date_from <= NOW() OR b.date_from IS NULL)',
+            array((int)$id)
+        );
 
-		// get random value
-		$banner = $banner[array_rand($banner)];
+        if (!empty($banner)) {
+            // get random value
+            $banner = $banner[array_rand($banner)];
 
-		// add a view for the banner
-		if(!empty($banner)) self::increaseNumViews((int) $banner['id']);
+            // add a view for the banner
+            if (!empty($banner)) {
+                self::increaseNumViews((int)$banner['id']);
+            }
 
-		// return the banner
-		return $banner;
+            // return the banner
+            return $banner;
+        }
+
+        return array();
 	}
 
 	/**
