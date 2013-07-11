@@ -83,9 +83,7 @@ class FrontendBannersModel
             $banner = $banner[array_rand($banner)];
 
             // add a view for the banner
-            if (!empty($banner)) {
-                self::increaseNumViews((int)$banner['id']);
-            }
+            self::increaseNumViews((int)$banner['id']);
 
             // return the banner
             return $banner;
