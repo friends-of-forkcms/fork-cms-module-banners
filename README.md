@@ -1,14 +1,17 @@
-# Banners module for Fork CMS 5
+# Banners module for Fork CMS
 
 > The Banners module lets you add banner campaigns to your website.
 
-## Features
+**Download:**
+* [Module for Fork CMS 5.0.0](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/master.zip)
+* [Module for Fork CMS 3.5.0](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/1.1.0.zip)
 
+**Features:**
 * Widget: Bootstrap Carousel showing all the banners
 * Uses Doctrine & Symfony Form
 * Multi-language support
 
-## Installation
+**Installation**
 
 * [Download this module](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/master.zip)
 * "Upload module" in your Fork CMS
