@@ -13,7 +13,7 @@
 
 **Installation**
 
-* [Download this module](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/master.zip)
+* Download this module
 * "Upload module" in your Fork CMS
 * Install the module
 
