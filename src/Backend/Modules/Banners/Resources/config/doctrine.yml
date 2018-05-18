@@ -1,0 +1,20 @@
+doctrine:
+  dbal:
+    types:
+      banners_banner_image: Backend\Modules\Banners\Domain\Banner\ImageDBALType
+      banners_banner_status: Backend\Modules\Banners\Domain\Banner\StatusDBALType
+  orm:
+    mappings:
+      banners_banner:
+        type: annotation
+        is_bundle: false
+        dir: '%kernel.root_dir%/../src/Backend/Modules/Banners/Domain/Banner'
+        alias: BannersBanner
+        prefix: Backend\Modules\Banners\Domain\Banner
+      banners_banner_translation:
+        type: annotation
+        is_bundle: false
+        dir: '%kernel.root_dir%/../src/Backend/Modules/Banners/Domain/BannerTranslation'
+        alias: BannersBannerTranslation
+        prefix: Backend\Modules\Banners\Domain\BannerTranslation
+

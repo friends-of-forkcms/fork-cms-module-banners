@@ -1,0 +1,13 @@
+{% extends 'Banners/Resources/views/Backend/Add.html.twig' %}
+{% form_theme form 'Banners/Resources/views/Backend/Banner/Form/Banner.html.twig' %}
+{% import "Layout/Templates/macros.html.twig" as macro %}
+
+{% block actionbar %}
+  <div class="btn-toolbar pull-right">
+    <div class="btn-group" role="group">
+      {% if showBannersBannerIndex %}
+        {{ macro.buttonIcon( geturl('BannerIndex'), 'bars', 'lbl.Overview'|trans|ucfirst) }}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends 'Banners/Resources/views/Backend/Edit.html.twig' %}
+{% form_theme form 'Banners/Resources/views/Backend/Banner/Form/Banner.html.twig' %}
+{% import "Layout/Templates/macros.html.twig" as macro %}
+
+{% block actionbar %}
+  <div class="btn-toolbar pull-right">
+    <div class="btn-group" role="group">
+      {% if showBannersBannerIndex %}
+        {{ macro.buttonIcon( geturl('BannerIndex'), 'bars', 'lbl.Overview'|trans|ucfirst) }}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
+
+{% block deleteButton %}
+  {% if showBannersBannerDelete %}
+    <button type="button" class="btn btn-danger" id="activities-delete" data-toggle="modal" data-target="#confirmDelete">
+      <span class="fa fa-trash-o"></span>
+      {{ 'lbl.Delete'|trans|ucfirst }}
+    </button>
+  {% endif %}
+{% endblock %}
+
+{% block deleteModal %}
+  {% if showBannersBannerDelete %}
+    {{ form_start(deleteForm) }}
+    {{ form_row(deleteForm._token) }}
+    {{ form_row(deleteForm.id) }}
+    <div class="modal fade" id="confirmDelete" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="modal-title h4">{{ 'lbl.Delete'|trans|ucfirst }}</span>
+          </div>
+          <div class="modal-body">
+            <p>{{ 'msg.BannerConfirmDelete'|trans|format(bannerCase.name)|raw }}</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              <span class="fa fa-times"></span>{{ 'lbl.Cancel'|trans|ucfirst }}
+            </button>
+            <button type="submit" class="btn btn-danger">
+              <span class="fa fa-trash"></span>{{ 'lbl.Delete'|trans|ucfirst }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{ form_end(deleteForm) }}
+  {% endif %}
+{% endblock %}

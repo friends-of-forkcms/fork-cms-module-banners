@@ -1,0 +1,11 @@
+services:
+    banners.repository.banner:
+        class: Backend\Modules\Banners\Domain\Banner\BannerRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Banners\Domain\Banner\Banner
+    banners.repository.banner_translation:
+        class: Backend\Modules\Banners\Domain\BannerTranslation\BannerTranslationRepository
+        factory: ["@doctrine.orm.entity_manager", getRepository]
+        arguments:
+            - Backend\Modules\Banners\Domain\BannerTranslation\BannerTranslation

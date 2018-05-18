@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<name>Banners</name>
+	<version>2.0.0</version>
+	<requirements>
+		<minimum_version>5.0.0</minimum_version>
+	</requirements>
+	<description>
+		<![CDATA[
+			The banners module.
+		]]>
+	</description>
+	<authors>
+		<author>
+			<name><![CDATA[Lowie Benoot]]></name>
+			<url><![CDATA[http://www.lowiebenoot.be]]></url>
+		</author>
+		<author>
+			<name><![CDATA[Jeroen Desloovere]]></name>
+			<url><![CDATA[http://www.jeroendesloovere.be]]></url>
+		</author>
+	</authors>
+</module>

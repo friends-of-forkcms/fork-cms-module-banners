@@ -1,0 +1,82 @@
+{% block banners_banner_widget %}
+  <div class="row fork-module-content">
+    <div class="col-md-12">
+      <div role="tabpanel">
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="active" role="presentation">
+            <a href="#tabBanner" aria-controls="tabBanner" role="tab" data-toggle="tab">{{ 'lbl.Content'|trans|ucfirst }}</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+
+          <div role="tabpanel" class="tab-pane active" id="tabBanner">
+            <div class="row fork-module-content">
+              <div class="col-md-8">
+                <div class="form-group">
+                  {{ form_row(form.image) }}
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                <div class="form-group">
+                  {{ form_row(form.status) }}
+                </div>
+              </div>
+
+              <div class="col-md-12">
+                <div role="tabpanel">
+                  <ul class="nav nav-tabs" role="tablist">
+                    {# Translation tabs #}
+                    {% for locale,translationField in form.translations %}
+                      {% set tabName = 'tab' ~ locale|ucfirst %}
+                      <li role="presentation"{% if loop.first %} class="active"{% endif %}>
+                        <a href="#{{ tabName }}" aria-controls="{{ tabName }}" role="tab" data-toggle="tab">
+                          {{ locale|upper|tolabel|ucfirst }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+
+                  <div class="tab-content">
+                    {% for locale,translationField in form.translations %}
+                      {% set tabName = 'tab' ~ locale|ucfirst %}
+                      <div role="tabpanel" class="tab-pane{% if loop.first %} active{% endif %}" id="{{ tabName }}">
+                        <div class="form-group">
+                          {{ form_label(translationField.title) }}
+                          {{ form_widget(translationField.title) }}
+                        </div>
+                        <div class="form-group">
+                          {{ form_label(translationField.subTitle) }}
+                          {{ form_widget(translationField.subTitle) }}
+                        </div>
+                        <div class="form-group">
+                          {{ form_label(translationField.hasLinkToUrl) }}
+                          {{ form_widget(translationField.hasLinkToUrl) }}
+                        </div>
+                        <div class="form-group form-inline">
+                          <div class="row">
+                            <div class="col-sm-4">
+                              {{ SITE_URL }}/
+                            </div>
+                            <div class="col-sm-8">
+                              {{ form_widget(translationField.linkToUrl) }}
+                            </div>
+                          </div>
+                        </div>
+                        {{ form_rest(translationField) }}
+                      </div>
+                    {% endfor %}
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

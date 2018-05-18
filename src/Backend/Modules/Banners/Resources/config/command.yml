@@ -1,0 +1,26 @@
+services:
+  banners.handler.create_banner:
+    class: Backend\Modules\Banners\Domain\Banner\Command\CreateBannerHandler
+    arguments:
+      - "@banners.repository.banner"
+    tags:
+      - { name: command_handler, handles: Backend\Modules\Banners\Domain\Banner\Command\CreateBanner }
+
+  banners.handler.update_banner:
+    class: Backend\Modules\Banners\Domain\Banner\Command\UpdateBannerHandler
+    tags:
+      - { name: command_handler, handles: Backend\Modules\Banners\Domain\Banner\Command\UpdateBanner }
+
+  banners.handler.delete_banner:
+    class: Backend\Modules\Banners\Domain\Banner\Command\DeleteBannerHandler
+    arguments:
+      - "@banners.repository.banner"
+    tags:
+      - { name: command_handler, handles: Backend\Modules\Banners\Domain\Banner\Command\DeleteBanner }
+
+  banners.handler.re_sequence_banners:
+    class: Backend\Modules\Banners\Domain\Banner\Command\ReSequenceBannersHandler
+    arguments:
+      - "@banners.repository.banner"
+    tags:
+      - { name: command_handler, handles: Backend\Modules\Banners\Domain\Banner\Command\ReSequenceBanners }

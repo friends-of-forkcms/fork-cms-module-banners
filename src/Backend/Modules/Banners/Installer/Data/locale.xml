@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<locale>
+  <Backend>
+    <Core>
+      <item type="label" name="Banner">
+        <translation language="en"><![CDATA[banner]]></translation>
+        <translation language="nl"><![CDATA[banner]]></translation>
+      </item>
+      <item type="label" name="Banners">
+        <translation language="en"><![CDATA[banners]]></translation>
+        <translation language="nl"><![CDATA[banners]]></translation>
+      </item>
+      <item type="label" name="BannerIndex">
+        <translation language="en"><![CDATA[overview]]></translation>
+        <translation language="nl"><![CDATA[overzicht]]></translation>
+      </item>
+      <item type="label" name="BannerAdd">
+        <translation language="en"><![CDATA[add brand]]></translation>
+        <translation language="nl"><![CDATA[brand toevoegen]]></translation>
+      </item>
+      <item type="label" name="BannerEdit">
+        <translation language="en"><![CDATA[edit brand]]></translation>
+        <translation language="nl"><![CDATA[brand wijzigen]]></translation>
+      </item>
+    </Core>
+    <Banners>
+      <item type="label" name="Add">
+        <translation language="en"><![CDATA[add banner]]></translation>
+        <translation language="nl"><![CDATA[banner toevoegen]]></translation>
+      </item>
+      <item type="message" name="Added">
+        <translation language="en"><![CDATA[The banner was added.]]></translation>
+        <translation language="nl"><![CDATA[De banner werd toegevoegd.]]></translation>
+      </item>
+      <item type="message" name="BannerConfirmDelete">
+        <translation language="en"><![CDATA[Are your sure you want to delete the banner?]]></translation>
+        <translation language="nl"><![CDATA[Ben je zeker dat je de banner wil verwijderen?]]></translation>
+      </item>
+      <item type="label" name="Banners">
+        <translation language="en"><![CDATA[banners]]></translation>
+        <translation language="nl"><![CDATA[banners]]></translation>
+      </item>
+      <item type="message" name="Deleted">
+        <translation language="en"><![CDATA[The banner was deleted.]]></translation>
+        <translation language="nl"><![CDATA[De banner werd verwijderd.]]></translation>
+      </item>
+      <item type="message" name="EditBanner">
+        <translation language="en"><![CDATA[edit banner]]></translation>
+        <translation language="nl"><![CDATA[bewerk banner]]></translation>
+      </item>
+      <item type="message" name="Edited">
+        <translation language="en"><![CDATA[The banner was saved.]]></translation>
+        <translation language="nl"><![CDATA[Het banner werd opgeslagen.]]></translation>
+      </item>
+      <item type="message" name="ShouldHaveLinkToUrl">
+        <translation language="en"><![CDATA[Has a clickthrough to another page]]></translation>
+        <translation language="nl"><![CDATA[Heeft een doorklik naar een andere pagina]]></translation>
+      </item>
+      <item type="label" name="SubTitle">
+        <translation language="en"><![CDATA[subtitle]]></translation>
+        <translation language="nl"><![CDATA[subtitel]]></translation>
+      </item>
+      <item type="label" name="Url">
+        <translation language="en"><![CDATA[url]]></translation>
+        <translation language="nl"><![CDATA[url]]></translation>
+      </item>
+    </Banners>
+  </Backend>
+  <Frontend>
+    <Core>
+      <item type="label" name="ReadMore">
+        <translation language="en"><![CDATA[read more]]></translation>
+        <translation language="nl"><![CDATA[meer lezen]]></translation>
+      </item>
+    </Core>
+  </Frontend>
+</locale>
