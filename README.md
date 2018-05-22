@@ -3,7 +3,7 @@
 > The Banners module lets you add banner campaigns to your website.
 
 **Download:**
-* [Module for Fork CMS 5.0.0](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/master.zip)
+* [Module for Fork CMS 5.*](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/master.zip)
 * [Module for Fork CMS 3.5.0](https://github.com/friends-of-forkcms/fork-cms-module-banners/archive/1.1.0.zip)
 
 **Features:**
